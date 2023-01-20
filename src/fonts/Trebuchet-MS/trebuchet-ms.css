@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "Trebuchet MS";
 	font-weight: normal;
-	src: url("./trebuc.ttf") format("ttf");
+	src: url("./trebuc.woff") format("woff");
 }
 
 @font-face {
 	font-family: "Trebuchet MS";
 	font-weight: bold;
-	src: url("./trebuchet-ms-bold.ttf") format("ttf");
+	src: url("./trebuchet-ms-bold.woff") format("woff");
 }

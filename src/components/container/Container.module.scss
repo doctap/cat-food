@@ -14,6 +14,7 @@
 		color: #FFFFFF;
 		font-size: 2.25rem;
 		margin-bottom: 1.6%;
+		text-align: center;
 	}
 
 	.elements {
@@ -21,6 +22,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
+
+		&>* {
+			margin: 0 1.5rem 1.5rem 1.5rem;
+		}
 	}
 
 	&::after {

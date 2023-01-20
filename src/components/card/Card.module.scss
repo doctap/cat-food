@@ -1,6 +1,9 @@
 .container {
+	font-family: 'Trebuchet MS';
 
 	.body {
+		font-family: inherit;
+		border: none;
 		cursor: pointer;
 		position: relative;
 		width: 20rem;
@@ -8,8 +11,27 @@
 		border-right: 4px solid #1698D9;
 		overflow: hidden;
 		border-radius: 10px;
-		background: linear-gradient(135deg, transparent 2.1em, #fff 0);
-		
+		background: linear-gradient(135deg, transparent 2.5em, #fff 0);
+
+		&:disabled {
+			border-color: #B3B3B3;
+			background-color: linear-gradient(135deg, transparent 2.5em, #F2F2F2 0) ;
+		}
+
+		&:disabled .weight{
+			background: #B3B3B3;
+		}
+
+		&:disabled:hover {
+			border-color: #B3B3B3;
+		}
+
+		&:disabled .text .brand,
+		&:disabled .text .slogan,
+		&:disabled .text .tasty,
+		&:disabled .text .description {
+			color: #B3B3B3;
+		}
 
 		&:hover {
 			border-color: #2EA8E6;
@@ -17,6 +39,10 @@
 
 		&:hover .weight {
 			background: #2EA8E6;
+		}
+
+		&:disabled:hover .weight {
+			background: #B3B3B3;
 		}
 
 		&:hover~.CallToAction .button {
@@ -70,6 +96,10 @@
 			border-color: #2EA8E6;
 		}
 
+		&:disabled:after {
+			border-color: #B3B3B3;
+		}
+
 		&_selected:after {
 			border-color: #D91667;
 		}
@@ -109,6 +139,11 @@
 			border-color: #2EA8E6;
 		}
 
+		
+		&:disabled:before {
+			border-color: #B3B3B3;
+		}
+
 		&_selected:before {
 			border-color: #D91667;
 		}
@@ -128,14 +163,18 @@
 
 		.text {
 			position: absolute;
-			top: 3.1%;
+			top: 6.1%;
 			left: 16%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			text-align: start;
 
 			.slogan {
 				font-weight: normal;
 				font-size: 1rem;
 				color: #666666;
-				margin-bottom: 14%;
+				margin-bottom: 18%;
 
 				&::first-letter {
 					font-size: 130%;
@@ -148,7 +187,7 @@
 				font-weight: bold;
 				font-size: 3rem;
 				color: #000000;
-				margin-bottom: 12.5%;
+				margin-bottom: 19.5%;
 
 				&::first-letter {
 					font-size: 130%;
@@ -161,20 +200,33 @@
 				font-weight: bold;
 				font-size: 1.5rem;
 				color: #000000;
-				margin-bottom: 6.6%;
+				margin-bottom: 14.5%;
 			}
 
 			.description {
+				display: flex;
+				flex-direction: column;
+				align-items: start;
 				font-weight: normal;
 				font-size: .9rem;
 				color: #666666;
+				line-height: 1rem;
+			}
+
+			&>* {
+				line-height: 0;
 			}
 		}
 
 		.img {
 			position: absolute;
+			left: 0;
 			bottom: 0;
 			z-index: 0;
+		}
+
+		&:disabled .img {
+			opacity: 0.65;
 		}
 
 		.weight {
@@ -208,6 +260,7 @@
 	}
 
 	.CallToAction {
+		font-family: inherit;
 		margin-top: 4%;
 		display: flex;
 		justify-content: center;
@@ -216,10 +269,12 @@
 		color: #fff;
 
 		.text {
+			font-family: inherit;
 			font-size: 0.813rem;
 		}
 
 		.button {
+			font-family: inherit;
 			padding: 0;
 			cursor: pointer;
 			text-decoration: none;
@@ -230,6 +285,7 @@
 		}
 
 		.notAvailable {
+			font-family: inherit;
 			color: #FFFF66;
 		}
 	}

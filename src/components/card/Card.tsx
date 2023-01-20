@@ -34,7 +34,7 @@ export default function Card(props: ICard & ILocalProp) {
 	return (
 		<div className={styles.container}>
 
-			<div
+			<button
 				className={
 					isSelected
 						? `${styles.body} ${styles.body_selected} ${isSelectedHover && styles.body_selectedHover}`
@@ -42,6 +42,7 @@ export default function Card(props: ICard & ILocalProp) {
 				}
 				onClick={selectCard}
 				onMouseLeave={() => setIsSelectedHover(true)}
+				disabled={!props.isAvailable}
 			>
 
 				<div className={styles.text}>
@@ -73,7 +74,7 @@ export default function Card(props: ICard & ILocalProp) {
 					<div className={styles.measure}>{props.weight.measure}</div>
 				</div>
 
-			</div>
+			</button>
 
 			<div className={styles.CallToAction}>
 				{
