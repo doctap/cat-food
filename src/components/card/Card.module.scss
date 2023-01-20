@@ -1,0 +1,236 @@
+.container {
+
+	.body {
+		cursor: pointer;
+		position: relative;
+		width: 20rem;
+		height: 30rem;
+		border-right: 4px solid #1698D9;
+		overflow: hidden;
+		border-radius: 10px;
+		background: linear-gradient(135deg, transparent 2.1em, #fff 0);
+		
+
+		&:hover {
+			border-color: #2EA8E6;
+		}
+
+		&:hover .weight {
+			background: #2EA8E6;
+		}
+
+		&:hover~.CallToAction .button {
+			color: #2EA8E6;
+		}
+
+		&_selected {
+			border-color: #D91667;
+		}
+
+		// Состояние наведения применяется к выбранной упаковке не сразу, а после того, как курсор ушел с нее после первоначального выбора.
+		&_selected:hover {
+			border-color: #D91667;
+		}
+
+		&_selectedHover {
+			border-color: #D91667;
+		}
+
+		&_selectedHover:hover {
+			border-color: #E52E7A;
+		}
+
+		// Состояние наведения применяется к выбранной упаковке не сразу, а после того, как курсор ушел с нее после первоначального выбора.
+		&_selected:hover .weight {
+			background: #D91667;
+		}
+
+		&_selectedHover:hover .weight {
+			background: #E52E7A;
+		}
+
+
+
+		&:after {
+			content: "";
+			position: absolute;
+			width: calc(100% - 0px);
+			right: 0;
+			z-index: 1;
+			height: 10%;
+			top: 0px;
+			border-style: solid;
+			border-color: #1698D9;
+			border-width: 4px 0 0px 6px;
+			transform: skew(-45deg);
+			transform-origin: left bottom;
+		}
+
+		&:hover:after {
+			border-color: #2EA8E6;
+		}
+
+		&_selected:after {
+			border-color: #D91667;
+		}
+
+		// Состояние наведения применяется к выбранной упаковке не сразу, а после того, как курсор ушел с нее после первоначального выбора.
+		&_selected:hover:after {
+			border-color: #D91667;
+		}
+
+		&_selectedHover:after {
+			border-color: #D91667;
+		}
+
+		&_selectedHover:hover:after {
+			border-color: #E52E7A;
+		}
+
+		&_disabled:after {
+			pointer-events: none;
+			opacity: 0.4;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: calc(100% - 4px);
+			right: 0px;
+			z-index: 1;
+			height: calc(90% - 2px);
+			bottom: 0px;
+			border-style: solid;
+			border-color: #1698D9;
+			border-width: 0px 0 4px 4px;
+		}
+
+		&:hover:before {
+			border-color: #2EA8E6;
+		}
+
+		&_selected:before {
+			border-color: #D91667;
+		}
+
+		// Состояние наведения применяется к выбранной упаковке не сразу, а после того, как курсор ушел с нее после первоначального выбора.
+		&_selected:hover:before {
+			border-color: #D91667;
+		}
+
+		&_selectedHover:before {
+			border-color: #D91667;
+		}
+
+		&_selectedHover:hover:before {
+			border-color: #E52E7A;
+		}
+
+		.text {
+			position: absolute;
+			top: 3.1%;
+			left: 16%;
+
+			.slogan {
+				font-weight: normal;
+				font-size: 1rem;
+				color: #666666;
+				margin-bottom: 14%;
+
+				&::first-letter {
+					font-size: 130%;
+				}
+			}
+
+			.brand {
+				text-indent: -0.7mm;
+				line-height: 0;
+				font-weight: bold;
+				font-size: 3rem;
+				color: #000000;
+				margin-bottom: 12.5%;
+
+				&::first-letter {
+					font-size: 130%;
+					font-weight: normal;
+					letter-spacing: 0;
+				}
+			}
+
+			.tasty {
+				font-weight: bold;
+				font-size: 1.5rem;
+				color: #000000;
+				margin-bottom: 6.6%;
+			}
+
+			.description {
+				font-weight: normal;
+				font-size: .9rem;
+				color: #666666;
+			}
+		}
+
+		.img {
+			position: absolute;
+			bottom: 0;
+			z-index: 0;
+		}
+
+		.weight {
+			position: absolute;
+			bottom: 3.1%;
+			right: 3.1%;
+			height: 5rem;
+			width: 5rem;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			color: #ffff;
+			background: #1698D9;
+
+			&_selected {
+				background: #D91667;
+			}
+
+			.amount {
+				font-size: 2.625rem;
+			}
+
+			.measure {
+				font-size: 1.3rem;
+				line-height: 1rem;
+			}
+		}
+
+	}
+
+	.CallToAction {
+		margin-top: 4%;
+		display: flex;
+		justify-content: center;
+		font-size: 0.813rem;
+		font-weight: normal;
+		color: #fff;
+
+		.text {
+			font-size: 0.813rem;
+		}
+
+		.button {
+			padding: 0;
+			cursor: pointer;
+			text-decoration: none;
+			border: none;
+			border-bottom: 2px dashed;
+			background: rgba(0, 0, 0, 0);
+			color: #1698D9;
+		}
+
+		.notAvailable {
+			color: #FFFF66;
+		}
+	}
+}
