@@ -2,3 +2,10 @@
 	font-family: "Exo 2.0 Thin";
 	src: url("./Exo2.0-Thin.woff") format("woff");
 }
+
+/* @font-face {
+	font-family: "Exo 2.0 Thin";
+	src: local("Exo 2.0 Thin"),
+		url("./Exo2.0-Thin.eot"),
+		url("./Exo2.0-Thin.woff") format("woff");
+} */

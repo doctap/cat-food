@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'core-js/stable';
+// window.Postmate = require('postmate/build/postmate.min.js');
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

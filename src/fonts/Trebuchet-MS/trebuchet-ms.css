@@ -9,3 +9,19 @@
 	font-weight: bold;
 	src: url("./trebuchet-ms-bold.woff") format("woff");
 }
+
+/* @font-face {
+	font-family: "Trebuchet MS";
+	font-weight: normal;
+	src: local("Trebuchet MS"),
+		url("./trebuc.eot"),
+		url("./trebuc.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Trebuchet MS";
+	font-weight: bold;
+	src: local("Trebuchet MS"),
+		url("./trebuchet-ms-bold.eot"),
+		url("./trebuchet-ms-bold.woff") format("woff");
+} */

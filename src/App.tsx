@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './App.module.scss';
-import Card from './components/card/Card';
 import { ICard } from './types/data-contracts';
 import img from './images/cat_fun-box.png'
 import CardList from './components/CardList/CardList';

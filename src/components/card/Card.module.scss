@@ -75,8 +75,6 @@
 			background: #E52E7A;
 		}
 
-
-
 		&:after {
 			content: "";
 			position: absolute;
@@ -204,6 +202,7 @@
 			}
 
 			.description {
+				text-align: left;
 				display: flex;
 				flex-direction: column;
 				align-items: start;
