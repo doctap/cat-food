@@ -17,10 +17,10 @@ module.exports = (env, argv) => {
 			filename: "shim.js",
 			path: path.resolve(__dirname, './dist'),
 			clean: true,
-			publicPath: '/',
-			assetModuleFilename: 'src/assets/images/[name].[ext]',
+			publicPath: './',
+			assetModuleFilename: 'src/assets/[name][ext]',
 		},
-		devtool: "cheap-source-map",
+		devtool: "inline-source-map",
 		resolve: {
 			extensions: ['.tsx', '.ts', '.js'],
 		},
@@ -32,6 +32,7 @@ module.exports = (env, argv) => {
 			port: 3000,
 			historyApiFallback: true,
 			open: true,
+			hot: true
 		},
 		module: {
 			rules: [
