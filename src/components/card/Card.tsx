@@ -37,7 +37,7 @@ export default function Card(props: ICard & ILocalProp) {
 			<button
 				className={
 					isSelected
-						? `${styles.body} ${styles.body_selected} ${isSelectedHover && styles.body_selectedHover}`
+						? `${styles.body} ${styles.body_selected} ${isSelectedHover ? styles.body_selectedHover : ''}`
 						: `${styles.body}`
 				}
 				onClick={selectCard}
@@ -82,7 +82,7 @@ export default function Card(props: ICard & ILocalProp) {
 						? (isSelected
 							? <div>{props.text}</div>
 							: <>
-								<div className={styles.text}>{props.callToAction}&nbsp;</div>
+								<div className={styles.callToActionText}>{props.callToAction}&nbsp;</div>
 								<button
 									onClick={selectCard}
 									className={styles.button}

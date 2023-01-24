@@ -259,7 +259,7 @@
 	}
 
 	.CallToAction {
-		font-family: inherit;
+		height: 1rem;
 		margin-top: 4%;
 		display: flex;
 		justify-content: center;
@@ -267,13 +267,7 @@
 		font-weight: normal;
 		color: #fff;
 
-		.text {
-			font-family: inherit;
-			font-size: 0.813rem;
-		}
-
 		.button {
-			font-family: inherit;
 			padding: 0;
 			cursor: pointer;
 			text-decoration: none;
@@ -284,7 +278,6 @@
 		}
 
 		.notAvailable {
-			font-family: inherit;
 			color: #FFFF66;
 		}
 	}
